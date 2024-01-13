@@ -6,6 +6,8 @@
 
 ### 🌸 Link here: [mylu004.github.io/Task-Leaf/](https://mylu004.github.io/Task-Leaf/)  🌸
 
+For the best experience, please open the web in desktop or labtop ;;v;;
+
 ## **Some feature I made for the app:**
 🕒 **Pomodoro Perfection:** The timer is set following by ***[Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)***, which set as 25-5-15 for (work, shortbreak,longbreak). But feel free to waltz to your own study beat by customizing these intervals as you refer. 
 
