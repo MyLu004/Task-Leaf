@@ -262,7 +262,7 @@ autoModeCheckBox.addEventListener("change", function(){
 })
 
 console.log("my active: ", active)
-// console.log('my automode: ',autoModeActive)
+console.log('my automode: ',autoModeActive)
 
 function autoMode(){
     
