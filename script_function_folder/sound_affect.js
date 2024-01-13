@@ -60,7 +60,7 @@ function AllDone(){
 }
 
 //PLAYSOUND_FUNCTION 
-function playsound_affect(url, volume = 1.0){
+function playsound_affect(url, volume = 0.2){
     const sound_audio = new Audio(`./animal_crossing_soundaffect/${url}`);
     console.log(sound_audio);
     sound_audio.volume = volume
