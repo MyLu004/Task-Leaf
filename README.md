@@ -4,7 +4,7 @@
 
 🌼 Welcome to your very own cozy study retreat, where productivity meets the charm of Animal Crossing! 🍃✨ Embrace the magic of learning with the web study companion, a delightful blend of focus and relaxation.\n 
 
-### 🌸 Link here: 🌸
+### 🌸 Link here: mylu004.github.io/Task-Leaf/ 🌸
 
 ## **Some feature I made for the app:**
 🕒 **Pomodoro Perfection:** The timer is set following by ***[Pomodoro technique](https://en.wikipedia.org/wiki/Pomodoro_Technique)***, which set as 25-5-15 for (work, shortbreak,longbreak). But feel free to waltz to your own study beat by customizing these intervals as you refer. 
