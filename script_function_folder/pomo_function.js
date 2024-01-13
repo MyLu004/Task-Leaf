@@ -323,6 +323,7 @@ function resetCircletoggle(){
         },3000);
         console.log("RESET THE ICON TOGGLE")
         currentCycle = 0; //reset the cycle, already but just to make sure
+        shortbreak_to_longbreak();
     }
     
 }
