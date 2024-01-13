@@ -220,7 +220,6 @@ start.addEventListener("click",() =>{
                         // console.log("focus done, the prev cycle ", currentCycle)
                         currentCycle++;
                         Circletoggle();
-                        resetCircletoggle();
 
                         // console.log("my cycle++: ", currentCycle)
                     }
@@ -262,7 +261,7 @@ autoModeCheckBox.addEventListener("change", function(){
     document.dispatchEvent(new Event('BtnClicked'));
 })
 
-// console.log("my active: ", active)
+console.log("my active: ", active)
 // console.log('my automode: ',autoModeActive)
 
 function autoMode(){
@@ -273,19 +272,28 @@ function autoMode(){
         }
     
         else if(active === 'short' && currentCycle != totalCycle){
+           
             shortbreak_to_focus();
         }
-        else{
+        else if (active === 'short' && currentCycle === totalCycle){
+            resetCircletoggle();
             shortbreak_to_longbreak();
+        }
+        else if (active === 'long' || currentCycle === 0){
+            longbreak_to_focus();
         }
     }
 
     else{
         console.log("the auto mode is OFF")
     }
+
+    console.log("current cycle: ", currentCycle)
 }
 
+//AUTO MODE FUNCITON TIME
 
+//activate shortbreak()
 function focus_to_shortbreak(){
     // console.log("it went here, focus to short break")
     active = 'short';
@@ -294,18 +302,29 @@ function focus_to_shortbreak(){
     // currentCycle++; //icon++
 }
 
+
+//active focus
 function shortbreak_to_focus(){
     active="default"
     focusButton.click();
     start.click();
 }
 
+//active longbreak
 function shortbreak_to_longbreak(){
     active = 'long'
     longBreakButton.click();
     currentCycle = 0;
     console.log('shortbreak to longbreak')
+    start.click();
     resetCircletoggle();
+}
+
+//active focus
+function longbreak_to_focus(){
+    active="default"
+    focusButton.click();
+    start.click();
 }
 
 function Circletoggle(){
@@ -323,7 +342,6 @@ function resetCircletoggle(){
         },3000);
         console.log("RESET THE ICON TOGGLE")
         currentCycle = 0; //reset the cycle, already but just to make sure
-        shortbreak_to_longbreak();
     }
     
 }
