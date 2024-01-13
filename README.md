@@ -14,9 +14,9 @@
 🌈 **Lofi Playlist** (dedicate to Animal Crossing Lofi): a playlist of 100 soothing tunes, generously sprinkled with the magical essence of Animal Crossing! 
 
 ## Screenshot of the web ( ´ ω ` )✨
+![image](https://github.com/MyLu004/Task-Leaf/assets/114357581/2fa3147f-ab33-47b8-b021-4adabb04ae66)
+![image](https://github.com/MyLu004/Task-Leaf/assets/114357581/746292b9-1f28-48d9-b565-839b55b8026d)
 
-![Alt text](image-2.png)
-![Alt text](image-1.png)
 
 --------
 
