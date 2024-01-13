@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;500;700&display=swap');
+
+:root{
+    --background_color: #C4D9A9;
+    --primary_color:#D4A373;
+    --color2:#96511F;
+    --color3:#3A1913 ;
+    --color4:#FEFAE0 ; 
+    --color5:#FFFFFA; 
+    --color6:#DBBF9E;
+    --color7:#D9D9D9;
+    --color8:#FCF6BD;
+    
+}
+
+@font-face {
+    font-family: 'Animal-crossing';
+    src: url('../animal_crossing_font/FinkHeavy.ttf');
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'League Spartan','Lato','Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background_color);
+}
+
+/*---SCROLL BAR CUSTOMIZE START HERE---*/
+
+/*Webkit for browser: Chrome, Safari*/
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color:var(--color4) ;
+    border-radius: 4em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color2);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary_color);
+}
+
+/*Other properties to suppor other browser: Edge, or late*/
+*{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color4)  var(--color2) ;
+}
+/*---SCROLL BAR CUSTOMIZE END HERE---*/
+
+/* contianer for pomodoro and todo*/
+.container-everything{
+    position: absolute;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box-racoon-img-wrapper{
+    /* display: none; */
+    position: relative;
+    top:150px;
+    left: 100px;
+    width: 15%;
+    max-width: 30%;
+    /* background-color: red; */
+}
+
+.Nook-racooncontainer{
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%;
+    background: url('../animal_image/Nook_racoon_mainchar.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .box-racoon-img-wrapper{
+        display: none;
+    }
+}

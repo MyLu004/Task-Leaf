@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;500;700&display=swap');
+@import url('style-common.css');
+
+
+/* .container-todo{
+    background-color: red; 
+    position: absolute;
+    top:50%;
+    left:70%; 
+    transform: translate(-50%,-50%); 
+} */
+
+.taskname{
+    color:var(--color4);
+    font-size: 70px;
+    text-align: center;
+    margin: 80px auto 10px;
+}
+
+.todo-app{
+    background-color: var(--primary_color);
+    width: 100%;
+    max-width:400px;
+    height: 500px;
+    margin: 10px auto 20px;
+    padding: 40px 20px 20px ;
+    border-radius: 40px;
+    box-shadow: var(--color4) 25px 30px;
+}
+
+/* PROCESS BAR [TOP]*/
+.process-box{
+    /*background-color: red;*/
+    display: flex;
+    width: 100%;
+    height: 10%;
+    margin-bottom:20px;
+    padding: 12px;
+    border-radius: 50px;
+}
+
+.amount-task{
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+    margin-left:5px ;
+    
+}
+.progress-bar{
+    position: relative;
+    width: 500px;
+    height: 1.5em;
+    background-color: var(--color5);
+    border-radius: 1.5em;
+    margin-left:25px;
+}
+
+.filling{
+    content: '';
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left:.5em;
+    top:.3em;
+    bottom: .5em;
+    width: 0;
+    height: 15px;
+    border-radius: 4rem;
+    min-width: 1rem;
+    max-width: calc(100% - 0.98em);
+    background-color: var(--background_color);
+}
+
+
+/* BOX CONTAINING LIST [MIDDLE] */
+.box-list{
+    background-color: var(--color3);
+    width: 100%;
+    height: 65%;
+    padding: 30px;
+    border-radius: 50px;
+    margin-bottom:20px;
+    
+}
+
+.inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+#list-container {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#list-container li{
+    position: relative;
+    font-size: 20px;
+    font-family: "League Spartan",sans-serif;
+    font-weight: 700;
+
+    list-style-type: none;
+    background-color: var(--color5);
+    padding: 12px 8px 12px 60px;
+    margin-right: 10px;
+    margin-bottom:15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#list-container li::before{
+    content: '';
+    position: absolute;
+    height:26px;
+    width: 26px;
+    border-radius: 50%;
+    background-image:url('../animal_image/unchecked.png') ;
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left :15px;
+    
+}
+
+#list-container li.checked{
+    color:  var(--color3);
+    text-decoration: line-through;
+    background-color: var(--color5);
+}
+
+#list-container li.checked::before{
+    background-image: url('../animal_image/checked.png');
+}
+
+#list-container li span{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    width: 40px;
+    font-size: 20px;
+    color: var(--color3);
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+#list-container li span:hover{
+    background: var(--color7);
+}
+
+/* ADD BUTTON [FOOTER] */
+.row{
+    display: flex;
+    align-items: center;
+    background-color: var(--color6);
+    border: solid var(--color3);
+    width: 100%;
+    height: 15%;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    
+}
+
+.row input{
+    position: relative;
+    font-family: "League Spartan",sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    margin-left: 25px;
+}
+
+.row input::placeholder{
+    font-family: "League Spartan",sans-serif;
+    color: var(--color2);
+    font-weight: 700;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 27px;
+    padding: 10px 16px;
+    margin-right: 15px;
+    border-radius: 30px;
+    border: dashed var(--color3);
+    cursor: pointer;
+    background-color:var(--color4) ;
+}

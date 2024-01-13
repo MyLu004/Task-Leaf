@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;500;700&display=swap');
+@import url('style-common.css');
+
+.container-pomo{
+    /* background-color: blue; */
+    /* position: absolute;
+    top: 50%;
+    left: 40%; */
+    /* transform: translate(-50%,-50%); */
+    width: min(100%,550px,600px);
+}
+
+
+
+.container {
+    width: min(90%,550px,600px);
+    background-color: var(--primary_color);
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    border-radius: 4em;
+    padding: 10px 32px;
+    display: flex;
+    gap:.5em;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background-color: yellow; */
+}
+
+/* COUNT-CYCLE*/
+.dot-container{
+    background-color: var(--color3);
+    display: flex;
+    border-radius: 4.5em;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.dot-container.hide-icon{
+    display: none;
+}
+
+.container.hide-icon{
+    padding: 50px 32px;
+}
+
+/* .circle{
+    height:30px;
+    width: 30px;
+    background-image: url('../animal_image/leaf-gray.png');
+    background-size:cover;
+}
+
+.circle.checked{
+    height:30px;
+    width: 30px;
+    background-image: url('../animal_image/leaf-green.png');
+    background-size:cover;
+} */
+
+.circle{
+    height:5rem;
+    width: 5rem;
+    background-image: url('../animal_image/leaf-gray.png');
+    background-size:cover;
+}
+
+.circle.checked{
+    height:5rem;
+    width: 5rem;
+    background-image: url('../animal_image/leaf-green.png');
+    background-size:cover;
+}
+
+/* TIME BUTTON   */
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:var(--color6) ;
+}
+
+.section-container{
+    display: flex;
+    gap:1em;
+    justify-content: center;
+}
+
+.btn{
+    font-family: "League Spartan",sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 9px;
+    width: 100%;
+    border-radius: 4em;
+    border: var(--color2);
+    border-width: 3px;
+    background-color: var(--color4);
+    color:var(--color3);
+}
+
+
+
+.btn-focus{
+    color: var(--color3);
+    background-color: var(--color6);
+    border: var(--color3) solid;
+}
+
+.function-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+/* TIMER */
+#time{
+    text-align: center;
+    color: var(--color5);
+    font-size: 5em;
+    font-weight: 700;
+}
+
+/* FUNCTION BUTTON */
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#start, 
+#pause{
+    width: 55%;
+    padding: .5em .2em;
+    margin: 10px;
+    border-radius: 1.5em;
+    border: var(--color3) solid;
+    border-width: 4.7px;
+    font-size: 1.5em;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--color4);
+}
+
+#start:hover,#pause:hover{
+    background-color: var(--color6);
+}
+
+#restart{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color3);
+    font-size: 2em;
+}
+
+/* DISPLAY FUNCTION BUTTON */
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+@media screen and (max-width: 800) {
+    
+}

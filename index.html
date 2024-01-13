@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="animal-crossing icon" type="image/x-icon" href="../Animal_crossing_project/animal_image/racoon_favi.ico"/>
+    
+    <!--STYLES SHEET-->
+    <link rel="stylesheet" href="style_folder/style-common.css">
+    <link rel="stylesheet" href="style_folder/style-todo.css">
+    <link rel="stylesheet" href="style_folder/style-pomo.css">
+    <link rel="stylesheet" href="style_folder/style-setting.css">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <title>Task Leaf</title>
+</head>
+<body>
+
+     <!-- SETTING-CONTAINER -->
+    <div class="setting-btn"></div>
+    <div class="setting-container">
+        <div class="setting-container-inner">
+            
+            <!-- TIME-SETTING-CONTAINER -->
+            <div class="time-setting">
+                <h2 class="Time-title">TIME</h2>
+                <div class="adjust-time-container">
+                    
+                    <div class="contain-box-time-btn">
+                        <h2 class="timebtn">focus</h2>
+                        <div class="focusbtn btnTime">
+                            <span class="num">25</span>
+                            <div class="btn-contain">
+                                <span class="plus"></span>
+                                <span class="minus"></span>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    <div class="contain-box-time-btn">
+                        <h2 class="timebtn">short break</h2>
+                        <div class="shortBreakbtn btnTime">
+                            
+                            <span class="num">05</span>
+                            <div class="btn-contain">
+                                <span class="plus"></span>
+                                <span class="minus"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contain-box-time-btn">
+                        <h2 class="timebtn">long break</h2>
+                        <div class="longBreakbtn btnTime">
+                        
+                            <span class="num">15</span>
+                            <div class="btn-contain">
+                                <span class="plus"></span>
+                                <span class="minus"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <!--CHECK BOX CONTAINER-->
+                <div class="checkboxWrapper">
+                    <div class="checkbox-container cb1">
+                        <input type="checkbox" id="auto-checkbox">
+                        <label for="checkmark">auto-transitor timer on</label>
+                    </div>
+                
+                    <div class="checkbox-container cb2">
+                        <input type="checkbox" id="icon-checkbox">
+                        <label for="checkmark">hide icon</label>
+                    </div>
+            
+                    <div class="checkbox-container cb2">
+                        <input type="checkbox" id="sound-checkbox">
+                        <label for="checkmark">sound effect off</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MUSIC-SETTING-CONTAINER -->
+            <div class="music-setting-container">
+                <div class="music-container-inner">
+                    <div class="music-wrapper">
+                        <div class="music-cover-image"></div>
+                        <div class="music-list-wrapper">
+                            <table class="list" id="playlist">
+
+                                <!--SONG start-->
+                                <tr class="song">
+                                    <td class="no">
+                                        <h5>1</h5>
+                                    </td>
+                                    <td class="title">
+                                        <h6>Song Title</h6>
+                                    </td>
+                                </tr>
+                                <!--SONG end-->
+
+                                
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="music-control">
+                        <i class="fas fa-backward" id="prev"></i>
+                        <i class="fas fa-play" id="playpause"></i>
+                        <i class="fas fa-forward" id="next"></i>
+                    </div>
+                    <!-- <div class="music-player-body"></div> -->
+                </div>
+                
+                <div class="music-volume">
+                    <div class="music-slider">
+
+                        <div class="icon-volume">
+                            <i class="fa-solid fa-volume-high" id="VolumeIcon"></i>
+                            <!-- <i class="fa-solid fa-volume-low" ></i>
+                            <i class="fa-solid fa-volume-xmark"></i> -->
+                        </div>
+                        <input type="range" id="volumeSlider" min="0" max="100" value="100">
+
+                        <div class="music-slider-value">100</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--FOOTER SETTING START HERE-->
+        <div class="Bottom-function">
+            <h2 class="Themaker">made by My Lu</h2>
+            <i class="fa-solid fa-circle-info" id="info-icon">
+                <div class="container-info-note">
+                    <span class="info-note">
+                        <strong><h3 class = "Info-title">Pomodoro Cycle:</h3></strong><br>
+                        <ul>
+                            <li><u>Work Interval:</u>
+                                Typically 25 minutes, focused work on a specific task.
+                                <ul>
+                                    <li>- Short Break: A 5-minute break to relax and recharge.</li>
+                                    <li>- Pomodoro Completion: After completing four work intervals, 
+                                        take a longer break of around 15-30 minutes.</li>
+                                </ul>
+                            <br> More info about <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">pomodoro technique</a></li>
+                                
+                                <br>
+    
+                            <li><u>Icon function:</u>
+                                Each icon will toggle active eveytime you finish the focus [work] cycle, 
+                                as long you have 4 icons, the next <u>auto cycle</u> break will be long break.</li>
+                                
+                                <br>
+    
+                            <li><u>Sound effect:</u>
+                                Checkbox to turn the functions off. The sound effect is play sound when 
+                                button click or when complete tasks,break end.
+                                If the sound is distracted, feel free to turn it off :3
+                            </li>
+    
+                                <br>
+    
+                            <li><u>Time setting:</u>
+                                Default is 25,05,15 for focus, short break, long break to follow the 
+                                podomoro method. But feel free to adjust the time as you prefer
+                            </li>
+    
+                                <br>
+    
+                            <li><u>Music:</u>
+                                100 songs indicate on Animal Crossing Lofi (if there any songs you wanna 
+                                add, just let me know) 
+                                - Volume adjustment if needs
+                            </li>
+
+                            <br>
+    
+                            <li>
+                                <U>Little Note: </U>If you spot any bugs 🐞 or something else that look a bit
+                                 off, please let me know! TY XDD
+                            </li>
+                            
+                        </ul>
+                    </span>
+                </div>
+                
+            </i>
+        </div>
+        <!--FOOTER SETTING END HERE-->
+    </div>
+
+    <!--SETTING CONTAINER END HERE-->
+    
+    <div class="container-everything">
+        
+        <!--POMODORO CONTAINER START HERE-->
+        <div class="box-racoon-img-wrapper">
+            <div class="Nook-racooncontainer"></div>
+        </div>
+
+        <div class="container-pomo">
+
+            <div class="container innerPROMODORO">
+            
+                <div class="dot-container">
+                    <div id="dot1" class="circle"></div>
+                    <div id="dot2" class="circle"></div>
+                    <div id="dot3" class="circle"></div>
+                    <div id="dot4" class="circle"></div>
+                </div>
+        
+                <div class="section-container">
+                    <!-- time button container -->
+                    <button id="focus" class="btn btn-timer btn-focus">
+                        Focus
+                    </button>
+        
+                    <button id="shortbreak" class=" btn btn-shortbreak">
+                        Short break
+                    </button>
+            
+                    <button id="longbreak" class="btn btn-longbreak">
+                        Long break
+                    </button>
+                </div>
+        
+                <div class="function-container">
+                    <span id="time"></span>
+                    <div class="button-container">
+                        <!--function button: start,pause,restart-->
+                        
+                        <button id="start" class="show">START</button>
+                        <button id="pause" class="hide">PAUSE</button>             
+        
+                        <button id="restart" class="hide">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--POMODORO CONTAINER END HERE-->
+        </div>
+        
+        <div class="container-todo">
+            <div class="todo-app">
+                <div class="process-box">
+                    <p class="amount-task" id="amountTask">0/0</p>
+                    <div class="progress-bar">
+                        <div class="filling"></div>
+                    </div>
+                </div>
+                    
+                <div class="box-list">
+                    <div class="inner-box">
+                        <ul id="list-container">
+                        </ul>
+                    </div>
+                    
+                </div>
+        
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="ADD TASK" onkeydown="handleKeyDown(event)">
+                    <button onclick = "addTask()">+</button>
+                </div>
+            </div>
+        </div>
+        <!--TODO CONTAINER END HERE-->
+    </div>
+    
+
+    <div class="cat_Icon"></div>
+    <div class="cat-info-container">
+        <span class="cat-note">
+            aww, you're here. Thanks a ton for using this.
+            Please check out my other stuff in 
+            <a href="https://github.com/MyLu004" target="_blank">Github!</a>
+            (´• ω •`) ♡
+        </span>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="script_function_folder/todo_function.js"></script>
+    <script src="script_function_folder/pomo_function.js"></script>
+    <script src = "script_function_folder/sound_affect.js"></script>
+    <script type ="module" src = "script_function_folder/setting_function.js"></script>
+    <script src = "script_function_folder/songs.js"></script>
+    
+</body>
+</html>
