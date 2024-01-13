@@ -2,7 +2,7 @@
 
 ## Link to the web: 
 
-🌼 Welcome to your very own cozy study retreat, where productivity meets the charm of Animal Crossing! 🍃✨ Embrace the magic of learning with the web study companion, a delightful blend of focus and relaxation.\n 
+🌼 Welcome to your very own cozy study retreat, where productivity meets the charm of Animal Crossing! 🍃✨ Embrace the magic of learning with the web study companion, a delightful blend of focus and relaxation.
 
 ### 🌸 Link here: [mylu004.github.io/Task-Leaf/](https://mylu004.github.io/Task-Leaf/)  🌸
 
