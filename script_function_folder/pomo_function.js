@@ -11,8 +11,8 @@ let shortBreakButton = document.getElementById("shortbreak");
 let longBreakButton = document.getElementById("longbreak");
 
 let startBtn = document.getElementById("start");
-let reset = document.getElementById("restart");
-let pause = document.getElementById("pause");
+let reset = document.getElementById("restart"); //pause btn
+let pause = document.getElementById("pause");   //reset btn
 
 
 //auto mode: cycle stuff
@@ -198,11 +198,13 @@ start.addEventListener("click",() =>{
     startBtn.classList.remove("show");
     document.dispatchEvent(new Event('BtnClicked'));
 
+    //if click start, that mean it pause = true
     if(paused){
         // console.log("my count: ",count)
         // console.log("my mincount: ",minCount)
-        paused = false;
+        paused = false; //set pause is false and start counting
 
+        //COUNTING FUNCTION
         set = setInterval(() => {
 
             if (count <= 0){
@@ -267,18 +269,25 @@ console.log('my automode: ',autoModeActive)
 function autoMode(){
     
     if (autoModeActive){
+
+        //if focus -> change to short break
         if (active === 'default'){
             focus_to_shortbreak();
         }
-    
+
+        //if short and not full cycle yet -> go back to focus
         else if(active === 'short' && currentCycle != totalCycle){
            
             shortbreak_to_focus();
         }
+
+        //if short and full cycle -> go to long break
         else if (active === 'short' && currentCycle === totalCycle){
             resetCircletoggle();
             shortbreak_to_longbreak();
         }
+
+        //from long break, go back to focus
         else if (active === 'long' || currentCycle === 0){
             longbreak_to_focus();
         }

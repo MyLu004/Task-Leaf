@@ -171,6 +171,28 @@ button:hover{
     display: block;
 }
 
-@media screen and (max-width: 800) {
-    
+@media screen and (max-width: 768px){
+   
+    .container-pomo{
+        /* background-color: blue; */
+        position: absolute;
+        top: 20%;
+        left: 0; 
+        /* transform: translate(-50%,-50%); */
+        /* width: min(100%,550px,600px); */
+        scale: 0.7;
+    }
 }
+
+@media screen and (max-width: 425px){
+   
+    .container-pomo{
+        /* background-color: blue; */
+        position: absolute;
+        top: 0;
+        left: 0; 
+        /* transform: translate(-50%,-50%); */
+        /* width: min(100%,550px,600px); */
+        scale: 0.7;
+    }
+} 

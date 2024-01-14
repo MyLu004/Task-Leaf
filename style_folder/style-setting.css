@@ -272,6 +272,7 @@ input[type="checkbox"]:checked:after{
     /* background-color: yellow; */
     padding: 10px 5px;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .list{
@@ -437,7 +438,7 @@ input[type="checkbox"]:checked:after{
     font-size:1rem;
     text-align: left;
     border-radius: 1.4rem;
-    padding: 2rem;
+    padding: 2em;
     line-height: 1.5;
     z-index: 50;
 
@@ -543,7 +544,7 @@ input[type="checkbox"]:checked:after{
 
 /*MEDIA START HERE*/
 
-/*LAPTOP 1440px*/
+/*LAPTOP 1520px*/
 @media screen and (max-width: 1520px) { 
     .time-setting{
         justify-self: center;
@@ -617,6 +618,52 @@ input[type="checkbox"]:checked:after{
     }
 }
 
+@media screen and (max-width: 1440px){
+
+    .setting-btn{
+        position: absolute;
+        height:50px;
+        width: 50px;
+        background-image: url('../animal_image/setting-removebg-preview.png');
+        background-size: cover;
+        cursor: pointer;
+        z-index: 6;
+    }
+    
+
+    .time-setting{
+        height: 44%;
+        
+    }
+    .btnTime{
+        width: 100px;
+        min-width: 50px;
+        height: 40px;
+        gap: 3px;
+        
+    }
+
+    .checkboxWrapper{
+        padding: 10px;
+    }
+
+    input[type="checkbox"]{
+        height: 18px;
+        width: 18px;
+        border: solid var(--color2) 3px;
+    }
+
+    label{
+        font-size: 15px;
+    }
+
+    .setting-container .Bottom-function{
+        font-size: 12px;
+        margin-bottom: 5px; 
+    }
+    
+}
+
 /*LAPTOP 1024px*/
 @media screen and (max-width: 1240px) {
 
@@ -653,4 +700,80 @@ input[type="checkbox"]:checked:after{
     }
     
 }
+
+@media screen and (max-width: 1024px) {
+    .setting-container{
+        height: 120vh;
+    }
+
+    .time-setting{
+        height: 43%;
+    }
+
+    .cat_Icon{
+        bottom :-100px;
+    }
+    
+    .cat-info-container{
+        font-size: 0.7em;
+        bottom:-100px;
+        right:5.1rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    
+    }
+
+    .cat-info-container::after{
+        bottom: 6px;
+    }
+    
+}
+
+@media screen and (max-width: 425px){
+    .setting-container{
+        height: 130vh;
+    }
+
+    .time-setting{
+        gap: 10px;
+        width: 100%;
+        height: 35%;
+        padding: 10px;
+    }
+
+    .setting-container-inner{
+        gap: 20px;   
+    }
+
+    .cat_Icon{
+        width: 60px;
+        height:60px;
+        bottom :-150px;
+    }
+
+    .cat-info-container{
+        font-size: 0.7em;
+        bottom:-145px;
+        right:3.5rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    
+    }
+
+    .cat-info-container::after{
+        bottom: 6px;
+    }
+}
+
+
+
+
 

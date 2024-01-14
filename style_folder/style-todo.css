@@ -198,3 +198,23 @@
     cursor: pointer;
     background-color:var(--color4) ;
 }
+
+@media screen and (max-width: 768px){
+   
+    .container-todo{
+        position: absolute;
+        top:0;
+        left: 50%;
+        scale: 0.7;
+    }
+} 
+
+@media screen and (max-width: 425px){
+   
+    .container-todo{
+        position: absolute;
+        top: 240px;
+        left: 0%;
+        scale: 0.7;
+    }
+} 
