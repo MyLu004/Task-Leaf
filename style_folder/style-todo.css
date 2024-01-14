@@ -196,6 +196,7 @@
     border-radius: 30px;
     border: dashed var(--color3);
     cursor: pointer;
+    color: var(--color3);
     background-color:var(--color4) ;
 }
 
