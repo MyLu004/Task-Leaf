@@ -228,13 +228,8 @@ start.addEventListener("click",() =>{
                     // console.log('my automode: ',autoModeActive)
                     // console.log('my active1: ',active)
                     autoMode();
+                    playingBreakEnd();
                 }
-            }
-
-            //add event listern for break end
-            if (mincount === 0 && count === 4){
-                console.log("my seconds is: ",count)
-                document.dispatchEvent(new Event('BreakEnd_sound'));
             }
 
             time.textContent=`${appendZero(minCount)}:${appendZero(count)}`
@@ -242,6 +237,13 @@ start.addEventListener("click",() =>{
         },1000);
     }
 });
+
+function playingBreakEnd(){
+    if (count === 4 && minCount === 0){
+        console.log("my seconds is: ",count)
+        document.dispatchEvent(new Event('BreakEnd_sound'));
+    }
+}
 
 //AUTO MODE CHECK BOX AND AUTO MODE FUNCTION
 let autoModeCheckBox = document.getElementById("auto-checkbox");
