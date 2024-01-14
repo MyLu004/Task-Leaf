@@ -5,7 +5,7 @@
 🌼 Welcome to your very own cozy study retreat, where productivity meets the charm of Animal Crossing! 🍃✨ Embrace the magic of learning with the web study companion, a delightful blend of focus and relaxation.
 
 ### 🌸 Link here: [mylu004.github.io/Task-Leaf/](https://mylu004.github.io/Task-Leaf/)  🌸
-
+### Design CANVA Link: [HERE!](https://www.canva.com/design/DAF4rtGIXj4/0DpKKwP-BNZzhHid76V6Lw/edit?utm_content=DAF4rtGIXj4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 For the best experience, please open the web in desktop or labtop ;;v;;
 
 ## **Some feature I made for the app:**
