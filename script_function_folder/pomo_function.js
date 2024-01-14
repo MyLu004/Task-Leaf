@@ -232,7 +232,7 @@ start.addEventListener("click",() =>{
             }
 
             //add event listern for break end
-            if (count === 4){
+            if (mincount === 0 && count === 4){
                 console.log("my seconds is: ",count)
                 document.dispatchEvent(new Event('BreakEnd_sound'));
             }
