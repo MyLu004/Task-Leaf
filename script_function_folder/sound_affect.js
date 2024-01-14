@@ -1,5 +1,5 @@
 
-let myVolume = 0.05;
+let myVolume = 0.3;
 
 const soundBtn = document.getElementById('sound-checkbox');
 
