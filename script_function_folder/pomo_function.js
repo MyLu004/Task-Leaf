@@ -225,6 +225,8 @@ start.addEventListener("click",() =>{
 
                         // console.log("my cycle++: ", currentCycle)
                     }
+
+
                     // console.log('my automode: ',autoModeActive)
                     // console.log('my active1: ',active)
                     autoMode();
