@@ -143,6 +143,7 @@ focusButton.addEventListener("click",()=> {
     focusButton.classList.add("btn-focus");
     pauseTimer();
     minCount = updateFocusTime();
+    console.log("focus btn mincount: ",minCount)
     count = 0;
     time.textContent= `${appendZero(minCount)}:00`;
     document.dispatchEvent(new Event('BtnClicked'));
@@ -156,6 +157,7 @@ shortBreakButton.addEventListener("click",()=>{
     shortBreakButton.classList.add("btn-focus");
     pauseTimer();
     minCount = updateShortBreakTime();
+    console.log("shortbreak btn mincount: ",minCount)
     count = 0;
     time.textContent = `${appendZero(minCount)}:00`
     document.dispatchEvent(new Event('BtnClicked'));
@@ -168,6 +170,7 @@ longBreakButton.addEventListener("click",()=>{
     longBreakButton.classList.add("btn-focus");
     pauseTimer();
     minCount = updateLongBreakTime();
+    console.log("longbreak btn mincount: ",minCount)
     count = 0;
     time.textContent = `${(minCount)}:00`;
     document.dispatchEvent(new Event('BtnClicked'));
@@ -203,19 +206,19 @@ start.addEventListener("click",() =>{
 
     //if click start, that mean it pause = true
     if(paused){
-        // console.log("my count: ",count)
-        // console.log("my mincount: ",minCount)
+        console.log("my count0: ",count)
+        console.log("my mincount0: ",minCount)
         paused = false; //set pause is false and start counting
 
         //COUNTING FUNCTION
         set = setInterval(() => {
-            // console.log("my mincoutn1: ",minCount)
-            // console.log("count1: ",count)
+            console.log("my mincoutn1: ",minCount)
+            console.log("count1: ",count)
             //if (count <= 0){
-            if (count == 0){
-                // console.log("count is 0, **")
+            if (count <= 0){
+                console.log("count is 0, **")
                 if(minCount != 0){
-                    // console.log("mincount is not 0, **")
+                    console.log("mincount is not 0, **")
                     minCount--;
                     count=59;
                 }
@@ -269,20 +272,22 @@ let autoModeActive = false;
 //toggle AUTOBOX
 autoModeCheckBox.addEventListener("change", function(){
     if(autoModeCheckBox.checked){
-        // console.log("the auto box is ON. CHECKED")
+        console.log("the auto box is ON. CHECKED")
         autoModeActive = true;
     }
 
     else{
-        // console.log("the auto box is OFF, UNCHECKED")
+        console.log("the auto box is OFF, UNCHECKED")
         autoModeActive = false;
     }
 
     document.dispatchEvent(new Event('BtnClicked'));
+
+    console.log("my active: ", active)
+    console.log('my automode: ',autoModeActive)
 })
 
-console.log("my active: ", active)
-console.log('my automode: ',autoModeActive)
+
 
 function autoMode(){
     
@@ -324,6 +329,7 @@ function autoMode(){
 function focus_to_shortbreak(){
     // console.log("it went here, focus to short break")
     active = 'short';
+    count = 0;
     shortBreakButton.click();
     start.click();
     // currentCycle++; //icon++
@@ -333,6 +339,7 @@ function focus_to_shortbreak(){
 //active focus
 function shortbreak_to_focus(){
     active="default"
+    count = 0;
     focusButton.click();
     start.click();
 }
@@ -344,12 +351,14 @@ function shortbreak_to_longbreak(){
     currentCycle = 0;
     console.log('shortbreak to longbreak')
     start.click();
+    count = 0;
     resetCircletoggle();
 }
 
 //active focus
 function longbreak_to_focus(){
-    active="default"
+    active="default";
+    count = 0;
     focusButton.click();
     start.click();
 }
