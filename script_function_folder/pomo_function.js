@@ -63,6 +63,7 @@ function handleTimeSettingsChange(){
 
 function updateFocusTime(){
     focus_mincount = parseInt(document.querySelector('.focusbtn .num').innerText);
+    count = 0;
     pauseTimer();
 
     if (active === 'default'){
@@ -76,6 +77,7 @@ function updateFocusTime(){
 
 function updateShortBreakTime(){
     short_mincount = parseInt(document.querySelector('.shortBreakbtn .num').innerText);
+    count = 0;
     pauseTimer();
 
     if (active === 'short'){
@@ -87,6 +89,7 @@ function updateShortBreakTime(){
 
 function updateLongBreakTime(){
     long_mincount = parseInt(document.querySelector('.longBreakbtn .num').innerText);
+    count = 0;
     pauseTimer();
 
     if (active === 'long'){
@@ -206,9 +209,13 @@ start.addEventListener("click",() =>{
 
         //COUNTING FUNCTION
         set = setInterval(() => {
-
-            if (count <= 0){
+            // console.log("my mincoutn1: ",minCount)
+            // console.log("count1: ",count)
+            //if (count <= 0){
+            if (count == 0){
+                // console.log("count is 0, **")
                 if(minCount != 0){
+                    // console.log("mincount is not 0, **")
                     minCount--;
                     count=59;
                 }
@@ -230,8 +237,13 @@ start.addEventListener("click",() =>{
                     // console.log('my automode: ',autoModeActive)
                     // console.log('my active1: ',active)
                     autoMode();
-                    playingBreakEnd();
                 }
+            }
+
+            if (count == 4 && minCount == 0){
+                console.log("IT WENT HERE")
+                console.log("my seconds is: ",count)
+                document.dispatchEvent(new Event('BreakEnd_sound'));
             }
 
             time.textContent=`${appendZero(minCount)}:${appendZero(count)}`
@@ -240,12 +252,14 @@ start.addEventListener("click",() =>{
     }
 });
 
-function playingBreakEnd(){
-    if (count === 4 && minCount === 0){
-        console.log("my seconds is: ",count)
-        document.dispatchEvent(new Event('BreakEnd_sound'));
-    }
-}
+// function playingBreakEnd(count,minCount){
+//     console.log("myCount: ",count)
+//     console.log("my Mincount: ",minCount)
+//     if (count === 4 && minCount === 0){
+//         console.log("my seconds is: ",count)
+//         document.dispatchEvent(new Event('BreakEnd_sound'));
+//     }
+// }
 
 //AUTO MODE CHECK BOX AND AUTO MODE FUNCTION
 let autoModeCheckBox = document.getElementById("auto-checkbox");
