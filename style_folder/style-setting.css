@@ -41,7 +41,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 25px;   
 }
 
@@ -404,9 +404,7 @@ input[type="checkbox"]:checked:after{
     color: var(--color5);
     position: absolute;
     bottom: 0;
-    /* left: 0; */
-    /* transform: translateX(-50%); */
-    margin-bottom: 10px; 
+    /* margin-bottom: 10px;  */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -664,6 +662,47 @@ input[type="checkbox"]:checked:after{
     
 }
 
+@media screen and (max-width: 1290px) {
+
+    .setting-container{
+        height: 200vh;
+    }
+
+    .time-setting{
+        height: 30%;
+        
+    }
+    
+    .adjust-time-container{
+        width: 90%;
+        gap: 5px;
+        /* flex-wrap: wrap; */
+        /* margin-top: 20px; */
+    }
+
+
+    .btnTime{
+        width: 75px;
+        min-width: 20px;
+        height: 40px;
+        gap:2px;
+    }
+
+    .checkboxWrapper{
+        
+        /* background-color: lightseagreen; */
+        gap: 5px;
+        padding: 5px;
+        overflow: hidden scroll;
+    }
+    .music-cover-image{
+        display: none;
+        /* background-color: red; */
+    }
+    
+}
+
+
 /*LAPTOP 1024px*/
 @media screen and (max-width: 1240px) {
 
@@ -733,9 +772,10 @@ input[type="checkbox"]:checked:after{
     
 }
 
+
 @media screen and (max-width: 425px){
     .setting-container{
-        height: 130vh;
+        height: 50vh;
     }
 
     .time-setting{
@@ -772,8 +812,3 @@ input[type="checkbox"]:checked:after{
         bottom: 6px;
     }
 }
-
-
-
-
-
